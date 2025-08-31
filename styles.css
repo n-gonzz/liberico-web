@@ -1,0 +1,172 @@
+:root {
+    --bg: #1f1f1f;
+    --panel: #222;
+    --panel-2: #111;
+    --gap: 18px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: start center;
+    padding: 36px;
+    background: linear-gradient(180deg, #2a2a2f 0%, #1d1d20 100%);
+    font-family: 'Segoe UI', Roboto, Arial, system-ui, sans-serif;
+    color: #eee;
+}
+
+
+.contenedor {
+    background: var(--bg);
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    padding: 28px;
+}
+
+
+.cabecera {
+    padding: 28px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%
+}
+
+.box {
+    background: var(--panel);
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+    position: relative;
+    overflow: hidden
+}
+
+
+.box .inner {
+    padding: 24px;
+    text-align: center
+}
+
+
+.lead {
+    color: var(--orange);
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 600;
+    letter-spacing: 0.6px
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 14px
+}
+
+
+.install h2 {
+    font-size: 38px;
+    color: #fff;
+    margin-bottom: 14px;
+    font-weight: 800
+}
+
+.install p {
+    color: #cfcfcf;
+    line-height: 1.8
+}
+
+.install .step {
+    color: #dfe;
+}
+
+.link {
+    display: inline-block;
+    margin-top: 18px;
+    text-decoration: underline;
+    color: #6fe8c6;
+    font-weight: 700
+}
+
+
+.grid-3 {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    justify-content: center
+}
+
+.grid-3 .col {
+    text-align: center
+}
+
+.icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: #fff;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-weight: 900
+}
+
+.small-link {
+    color: #9cd3ff;
+    text-decoration: underline;
+    font-weight: 700
+}
+
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 6px;
+    pointer-events: none;
+    border: 2px solid rgba(255, 255, 255, .03)
+}
+
+
+@media (max-width:720px) {
+    .titulo-grande {
+        font-size: 36px
+    }
+
+    .box {
+        padding: 18px;
+        min-height: 120px
+    }
+
+    .inner {
+        padding: 16px
+    }
+
+    .install h2 {
+        font-size: 28px
+    }
+}
