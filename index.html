@@ -11,49 +11,109 @@
 <body>
     <div class="contenedor" role="main">
         <header class="cabecera">
-            <div><img src="img/cabecera.png"></div>
+            <div><img src="img/cabecera.png" alt="Legado Ibérico"></div>
         </header>
 
-
         <div class="boxes">
-            <!-- Caja 1 -->
-            <section class="box">
+            <section class="box bienvenida">
                 <div class="inner">
-                    <p class="lead">Texto</p>
-                    <p class="muted" style="margin-top:14px">Texto</p>
-                    <p class="muted" style="margin-top:12px">Texto</p>
+                    <h1 class="titulo-grande">🦌 Bienvenido a <span>Legado Ibérico</span></h1>
+                    <h1 class="subtitulo">Versión: <span><strong>1.21.4</strong></span></h1>
+                    <h2 class="descripcion">Servidor con temática de caza, economía, reservas y animales en 3D.</h2>
                 </div>
             </section>
 
+            <!-- CAJA DE COMANDOS: USUARIOS DEFAULT -->
+<section class="box comandos default">
+    <div class="inner">
+        <h2>👤 Comandos Usuario</h2>
+        <p class="descripcion">Todos los jugadores tienen acceso a estos comandos básicos.</p>
+        <ul class="lista-comandos">
+            <li><strong>/home</strong> - Teletranspórtate a tu casa.</li>
+            <li><strong>/tpa</strong> - Solicita teletransporte a otro jugador.</li>
+            <li><strong>/tpaccept</strong> - Acepta una solicitud de teletransporte.</li>
+            <li><strong>/warp</strong> - Teletranspórtate a un punto de warp.</li>
+            <li><strong>/login</strong> - Inicia sesión en tu cuenta.</li>
+            <li><strong>/register</strong> - Regístrate si es tu primera vez.</li>
+            <li><strong>/kit</strong> - Recibe un kit inicial o diario.</li>
+            <li><strong>/menu</strong> - Abre el menú principal del servidor.</li>
+            <li><strong>/reservas</strong> - Muestra las reservas disponibles.</li>
+            <li><strong>/spawn</strong> - Vuelve al punto de spawn.</li>
+            <li><strong>/shop</strong> - Abre la tienda del servidor.</li>
+            <li><strong>/sethome</strong> - Establece tu casa personal.</li>
+            <li><strong>/delhome</strong> - Elimina tu casa establecida.</li>
+            <li><strong>/rtp</strong> - Teletranspórtate a un lugar aleatorio.</li>
+            <li><strong>/afk</strong> - Marca que estás ausente.</li>
+            <li><strong>/sit</strong> - Siéntate en el suelo.</li>
+            <li><strong>/lay</strong> - Acuéstate en el suelo.</li>
+            <li><strong>/skills</strong> - Consulta tus habilidades.</li>
+            <li><strong>/discord</strong> - Enlace al Discord del servidor.</li>
+            <li><strong>/tienda</strong> - Accede a la tienda virtual.</li>
+            <li><strong>/vote</strong> - Vota por el servidor y recibe recompensas.</li>
+            <li><strong>/normas</strong> - Consulta las normas del servidor.</li>
+            <li><strong>/mascotas</strong> - Gestiona tus mascotas.</li>
+            <li><strong>/protecciones</strong> - Consulta tus zonas protegidas.</li>
+            <li><strong>/abandonclaim</strong> - Libera un terreno protegido.</li>
+            <li><strong>/join</strong> - Únete a una partida.</li>
+            <li><strong>/leave</strong> - Sal de una partida.</li>
+            <li><strong>/ah</strong> - Abre la casa de subastas.</li>
+            <li><strong>/team</strong> - Gestiona tu equipo de jugadores.</li>
+            <li><strong>/pay</strong> - Paga dinero a otro jugador.</li>
+            <li><strong>/bal</strong> - Consulta tu saldo.</li>
+            <li><strong>/baltop</strong> - Muestra el ranking de dinero.</li>
+            <li><strong>/rewards</strong> - Reclama tus recompensas.</li>
+            <li><strong>/msg</strong> - Envía un mensaje privado.</li>
+            <li><strong>/r</strong> - Responde un mensaje privado.</li>
+            <li><strong>/casino</strong> - Accede al casino del servidor.</li>
+            <li><strong>/arenapvp</strong> - Entra al PvP arena.</li>
+            <li><strong>/tops</strong> - Muestra los mejores jugadores.</li>
+            <li><strong>/guia</strong> - Abre la guía del servidor.</li>
+            <li><strong>/tutorial</strong> - Muestra un tutorial rápido.</li>
+        </ul>
+    </div>
+</section>
 
-            <!-- Caja 2 -->
-            <section class="box install">
-                <div class="inner">
-                    <h2>Texto</h2>
-                    <p style="color:#c4c4c4">1. Texto &amp; <strong style="color:#5ae6c7">Texto</strong><br /><small class="muted">Texto</small></p>
-                    <p style="margin-top:12px;color:#c4c4c4">Texto<span
-                            style="color:#6fe8c6">Textl</span><br /><small
-                            class="muted">Texto</small></p>
-                    <p style="margin-top:14px;color:#8ffea3;font-weight:800">Texto</p>
-                </div>
-            </section>
+<!-- CAJA DE COMANDOS: VIP -->
+<section class="box comandos vip">
+    <div class="inner">
+        <h2>🔰 Comandos VIP</h2>
+        <p class="descripcion">Comandos adicionales para jugadores VIP.</p>
+        <ul class="lista-comandos">
+            <li><strong>/back</strong> - Vuelve a tu última ubicación.</li>
+            <li><strong>/ec</strong> - Abre tu cofres personales remotos.</li>
+            <li><strong>/hat</strong> - Coloca un bloque como sombrero.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- CAJA DE COMANDOS: MVP -->
+<section class="box comandos mvp">
+    <div class="inner">
+        <h2>🔰 Comandos MVP</h2>
+        <p class="descripcion">Comandos exclusivos para jugadores MVP.</p>
+        <ul class="lista-comandos">
+            <li><strong>/repair</strong> - Repara tu herramienta o armadura.</li>
+            <li><strong>/craft</strong> - Abre la interfaz de crafteo instantáneo.</li>
+            <li><strong>/anvil</strong> - Abre un yunque para encantar o reparar.</li>
+            <li><strong>/loom</strong> - Abre un telar para banderas y estandartes.</li>
+            <li><strong>/grindstone</strong> - Abre la piedra de afilar.</li>
+            <li><strong>/stonecutter</strong> - Abre la interfaz de cortador de piedra.</li>
+        </ul>
+    </div>
+</section>
 
 
-            <!-- Caja 3 -->
+            <!-- Enlaces -->
             <section class="box">
                 <div class="inner">
                     <div class="grid-3">
                         <div class="col">
                             <div class="icon">📄</div>
-                            <a class="small-link" href="#">Documentación</a>
+                            <a class="small-link" href="normas.html" target="_blank">Normas del servidor</a>
                         </div>
                         <div class="col">
                             <div class="icon">💬</div>
-                            <a class="small-link" href="#">Discord</a>
-                        </div>
-                        <div class="col">
-                            <div class="icon">💡</div>
-                            <a class="small-link" href="#">Crea una sugerencia</a>
+                            <a class="small-link" href="https://discord.gg/ZxvTsb5fvJ" target="_blank">Únete a nuestro Discord</a>
                         </div>
                     </div>
                 </div>
@@ -61,6 +121,5 @@
         </div>
     </div>
 </body>
-
 
 </html>

@@ -3,6 +3,12 @@
     --panel: #222;
     --panel-2: #111;
     --gap: 18px;
+
+    --title: #ffffff;
+    --subtitle: #9cd3ff;
+    --text: #cfcfcf;
+    --muted: #888;
+    --accent: #0dcf3a;
 }
 
 
@@ -12,19 +18,12 @@
     padding: 0
 }
 
-html,
 body {
-    height: 100%
-}
-
-body {
-    min-height: 100vh;
-    display: grid;
     place-items: start center;
-    padding: 36px;
     background: linear-gradient(180deg, #2a2a2f 0%, #1d1d20 100%);
     font-family: 'Segoe UI', Roboto, Arial, system-ui, sans-serif;
-    color: #eee;
+    color: var(--text);
+    line-height: 1.7;
 }
 
 
@@ -47,69 +46,85 @@ body {
     justify-content: center;
 }
 
+.cabecera img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* --- CAJAS --- */
 .boxes {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 18px;
     width: 100%
 }
 
 .box {
     background: var(--panel);
-    padding: 28px;
+    padding: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 160px;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
+    border-radius: 12px;
 }
 
-
 .box .inner {
-    padding: 24px;
+    padding: 20px;
     text-align: center
 }
 
 
+/* --- TEXTOS --- */
 .lead {
-    color: var(--orange);
-    font-size: 20px;
-    line-height: 1.8;
-    font-weight: 600;
-    letter-spacing: 0.6px
+    color: var(--title);
+    font-size: 26px;
+    line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
 .muted {
     color: var(--muted);
-    font-size: 14px
+    font-size: 15px
 }
 
-
 .install h2 {
-    font-size: 38px;
-    color: #fff;
-    margin-bottom: 14px;
-    font-weight: 800
+    font-size: 32px;
+    color: var(--accent);
+    margin-bottom: 18px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
 }
 
 .install p {
-    color: #cfcfcf;
-    line-height: 1.8
+    color: var(--text);
+    font-size: 16px;
+    margin: 10px 0;
 }
 
-.install .step {
-    color: #dfe;
+.install code {
+    background: #333;
+    color: var(--accent);
+    padding: 3px 6px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: monospace;
 }
 
+
+/* --- LINKS Y GRID --- */
 .link {
     display: inline-block;
     margin-top: 18px;
-    text-decoration: underline;
-    color: #6fe8c6;
-    font-weight: 700
+    color: var(--accent);
+    font-weight: 700;
 }
-
 
 .grid-3 {
     display: flex;
@@ -132,41 +147,172 @@ body {
     align-items: center;
     justify-content: center;
     color: #333;
-    font-weight: 900
+    font-weight: 900;
+    font-size: 24px;
 }
 
 .small-link {
-    color: #9cd3ff;
-    text-decoration: underline;
-    font-weight: 700
+    color: var(--subtitle);
+    text-decoration: none;
+    font-weight: 700;
 }
 
 
+/* --- EFECTO BORDES --- */
 .box::after {
     content: '';
     position: absolute;
     inset: 6px;
-    border-radius: 6px;
+    border-radius: 10px;
     pointer-events: none;
-    border: 2px solid rgba(255, 255, 255, .03)
+    border: 2px solid rgba(255, 255, 255, .04)
+}
+
+/* --- BIENVENIDA --- */
+.titulo-grande {
+    font-size: 42px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 14px;
+    line-height: 1.2;
+}
+
+.subtitulo {
+    font-size: 42px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 14px;
+    line-height: 1.2;
+}
+
+.titulo-grande span {
+    color: var(--accent);
+}
+
+.subtitulo span {
+    color: rgb(255, 240, 25);
+}
+
+.descripcion {
+    font-size: 18px;
+    color: var(--text);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* --- COMANDOS --- */
+.comandos h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.comandos .descripcion {
+    font-size: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* Lista de comandos */
+.lista-comandos {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-comandos li {
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    min-width: 120px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: default;
+}
+
+/* Colores por rango actualizados */
+.comandos.default .lista-comandos li {
+    background: #5a5a5a; /* azul-gris suave */
+    color: #fff;
+}
+
+.comandos.vip .lista-comandos li {
+    background: #cafff4; /* azul-verde */
+    color: #1f1f1f;
+}
+
+.comandos.mvp .lista-comandos li {
+    background: #f2e9b7; /* amarillo */
+    color: #1f1f1f;
 }
 
 
+/* Hover */
+.lista-comandos li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width:720px) {
+    .comandos h2 {
+        font-size: 24px;
+    }
+    .comandos .descripcion {
+        font-size: 14px;
+    }
+    .lista-comandos li {
+        font-size: 14px;
+        min-width: 100px;
+        padding: 6px 10px;
+    }
+}
+
+
+/* Responsive */
 @media (max-width:720px) {
     .titulo-grande {
-        font-size: 36px
+        font-size: 32px;
     }
-
-    .box {
-        padding: 18px;
-        min-height: 120px
+    .subtitulo {
+        font-size: 18px;
     }
+    .descripcion {
+        font-size: 16px;
+    }
+}
 
-    .inner {
-        padding: 16px
+/* --- RESPONSIVE --- */
+@media (max-width:720px) {
+    .lead {
+        font-size: 22px;
     }
 
     .install h2 {
-        font-size: 28px
+        font-size: 24px;
+    }
+
+    .install p {
+        font-size: 14px;
+    }
+
+    .small-link {
+        font-size: 14px;
+    }
+
+    .box {
+        padding: 20px;
+        min-height: 120px;
+    }
+
+    .inner {
+        padding: 14px;
     }
 }
